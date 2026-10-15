@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rental-scam-checker
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:scamchecker;DB_CLOSE_DELAY=-1}
+    username: ${DB_USER:sa}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+scam-checker:
+  # Illustrative placeholder figures (EUR / month). Replace with current data, e.g. the RTB Rent Index.
+  rent-benchmarks:
+    default-one-bed-median: 1300
+    one-bed-medians:
+      "[dublin 2]": 2300
+      "[dublin 4]": 2300
+      "[dublin 6]": 2100
+      "[dublin]": 1900
+      "[cork]": 1450
+      "[galway]": 1400
+      "[limerick]": 1250
+      "[waterford]": 1150
+    bedroom-multipliers:
+      0: 0.80
+      1: 1.00
+      2: 1.30
+      3: 1.60
+      4: 1.90
+    suspicious-ratio: 0.75   # rent below 75% of typical -> medium flag
+    severe-ratio: 0.55       # rent below 55% of typical -> high flag
+  community:
+    # Number of independent reports at which a contact is treated as a confirmed scammer.
+    critical-report-threshold: 3

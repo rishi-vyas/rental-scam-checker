@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: scamchecker
+      POSTGRES_USER: scamchecker
+      POSTGRES_PASSWORD: scamchecker
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scamchecker"]
+      interval: 5s
+      retries: 10
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/scamchecker
+      DB_USER: scamchecker
+      DB_PASSWORD: scamchecker
+    ports:
+      - "8080:8080"

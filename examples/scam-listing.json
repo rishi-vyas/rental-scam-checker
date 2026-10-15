@@ -1,0 +1,13 @@
+{
+  "title": "Cheap 2 bed Ballsbridge",
+  "description": "Lovely 2 bed apartment in Dublin 4, fully furnished, all bills included. I am currently working abroad on an oil rig so I can't show you the property, but the keys will be sent to you by courier once payment is complete. The payment will be handled through Airbnb who will hold the deposit for you. Lots of interest so first come first served. Please send a copy of your passport. Pay with Western Union. More details at https://daft-ie-secure-rentals.com/listing/8812",
+  "monthlyRent": 900,
+  "location": "Ballsbridge, Dublin 4",
+  "bedrooms": 2,
+  "depositAmount": 2700,
+  "contactEmail": "daft.support.payments@gmail.com",
+  "contactPhone": "+44 7700 900123",
+  "requestedPaymentMethods": ["WESTERN_UNION"],
+  "viewingOffered": false,
+  "paymentRequestedBeforeViewing": true
+}

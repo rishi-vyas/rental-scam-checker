@@ -1,0 +1,14 @@
+{
+  "title": "2 bed apartment, Rathmines",
+  "description": "Bright two-bedroom apartment on the second floor of a well-managed block in Rathmines. Fully furnished, gas central heating, secure bike storage and a small balcony facing south. Viewings on Tuesday and Thursday evenings with the letting agent; please bring references. Tenancy will be registered with the RTB. BER C1.",
+  "monthlyRent": 2450,
+  "location": "Rathmines, Dublin 6",
+  "bedrooms": 2,
+  "depositAmount": 2450,
+  "contactEmail": "lettings@example-agency.ie",
+  "contactPhone": "01 555 0123",
+  "listingUrl": "https://www.daft.ie/for-rent/12345",
+  "requestedPaymentMethods": ["BANK_TRANSFER"],
+  "viewingOffered": true,
+  "paymentRequestedBeforeViewing": false
+}
